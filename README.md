@@ -1,4 +1,6 @@
-![curie](curie.gif)
+<div align="center">
+<img src="curie.gif" alt="cuire" width="800px">
+</div>
 
 # TamakEriFever: Google Research Football AI Engine
 
