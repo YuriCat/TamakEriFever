@@ -1,6 +1,22 @@
-# TamakEri: google research football AI engine
+![curie](curie.gif)
+
+# TamakEriFever: Google Research Football AI Engine
+
+[kaggle competition](https://www.kaggle.com/c/google-football/)
 
 # Usage
+
+## Build docker image
+
+```bash
+ docker build -t football:latest -f Dockerfile .
+```
+
+## Run docker container
+
+```bash
+ docker run --ipc host --name football -v $PWD:/home -w=/ --rm -it football:latest /bin/bash -c "cd /home && /bin/bash"
+```
 
 ## Rendering game vs builtin_ai
 
@@ -23,13 +39,6 @@ python handyrl.py --eval ${MODEL_PATH} ${NUM_GAMES} ${NUM_WORKERS}
 ```
 
 ### Worker machines
-
-```bash
- docker build -t football:latest -f Dockerfile .
-```
-```bash
- docker run --ipc host --name football -v $PWD:/home -w=/ --rm -it football:latest /bin/bash -c "cd /home && /bin/bash"
-```
 
 ```bash
  python handyrl.py --worker
